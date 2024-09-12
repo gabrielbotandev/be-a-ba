@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -6,16 +6,20 @@
     <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Be a Ba</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
     <div id="app">
       <main>
+        <div class="title">
+          <h1>Bê a Bá</h1>
+          <p>Desenvolvido durante o Workshop JS na Fatec Jahu</p>
+        </div>
         <div class="content">
-          <div id="streak" class="streak">
-            
+          <div id="streakContainer">
+            <p id="streakText">Acertos:</p>
+            <div id="streak" class="streak"></div>
           </div>
           <div class="list-squares">
             <div id="first-letter" class="square">?</div>
@@ -24,24 +28,31 @@
           </div>
           <div>
             <form id="form">
-              <input id="word" class="input" type="text" name="word" disabled />
+              <input
+                id="word"
+                class="input"
+                autocomplete="off"
+                type="text"
+                name="word"
+                disabled
+              />
               <div>
                 <span id="error" class="error">
                   A palavra digitada não existe
                 </span>
               </div>
             </form>
-            <button id="new-game" class="btn">
-              Nova Partida
-            </button>
+            <button id="new-game" class="btn">Nova Partida</button>
+            <p id="wordListTitle">Palavras escritas</p>
+            <div id="wordList"></div>
           </div>
         </div>
         <div class="footer">
           <p class="tip">
-            <span class="bold">Como jogar</span>: Dado as 3 letras no topo, 
-             digite no campo palavras que contenham as três letras; 
-             Digitando uma palavra existente no dicionário português que 
-             contenha as 3 letras, você ganha.
+            <span class="bold">Como jogar</span>: Dado as 3 letras no topo,
+            digite no campo palavras que contenham as três letras; Digitando uma
+            palavra existente no dicionário português que contenha as 3 letras,
+            você ganha.
           </p>
         </div>
       </main>
